@@ -15,8 +15,8 @@ class ViewController: UIViewController, ARSessionDelegate,UICollectionViewDelega
     
     
     var
-filterImages:[String] = ["white","white","white","white","white","white","white","white","white"]
-    
+filterImages:[String] = GlobalData.FilterImages.bridal
+    var isCollectionViewVisible = true
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filterImages.count
@@ -25,31 +25,45 @@ filterImages:[String] = ["white","white","white","white","white","white","white"
         guard let cell = collectionView.cellForItem(at: indexPath) as? FilterViewARCollectionViewCell else {
             return
         }
-
-        if selectedCell == cell {
-            // Deselect the cell
-            selectedCell = nil
-        } else {
-            // Deselect the previously selected cell
-            selectedCell?.contentView.backgroundColor = UIColor.clear
-
-            // Select the tapped cell
-            selectedCell = cell
-            selectedCell?.contentView.backgroundColor = UIColor.white
-            texturedFace.updateButtonType("makeup")
+        selectedCell?.contentView.layer.borderWidth = 0.0
+        selectedCell?.contentView.layer.borderColor = UIColor.clear.cgColor
+        // Check if the tapped cell is the same as the currently selected cell
+            if selectedCell == cell {
+                // Perform a different action for the same cell being tapped again
+                print("Cell at index \(indexPath.row) tapped again")
+               
+                // Call the changeTexture method
+                texturedFace.updateButtonType(MakeupData.MakeupTutData.bridalTutorial[0])
+                collectionView.isHidden=true
+                isCollectionViewVisible=false
             resetTracking()
-        }
+                return
+            }
+
+            selectedCell = cell
+        texturedFace.updateButtonType(MakeupData.MakeupFilters.bridalMakeup[0])
+            resetTracking()
+            cell.contentView.layer.borderWidth = 5.0
+            cell.contentView.layer.borderColor = UIColor.blue.cgColor
+        
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+
+
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FilterViewARCollectionViewCell
+        if(isCollectionViewVisible==true){
+            collectionView.isHidden=false
+        }
         cell.filterImage.image = UIImage(named: filterImages[indexPath.row])
         cell.filterImage.layer.cornerRadius = 40
         cell.indexPath = indexPath // Set the indexPath property
         cell.contentView.layer.cornerRadius = 40
-
-        // Set the initial background color based on the selectedCell
         cell.contentView.backgroundColor = (selectedCell == cell) ? UIColor.white : UIColor.clear
+
+          // Set border for the currently selected cell
+        
 
         return cell
     }
@@ -60,8 +74,8 @@ filterImages:[String] = ["white","white","white","white","white","white","white"
     @IBAction func infoBtn(_ sender:  UIButton) {
         
             print("tap")
-            // Call the changeTexture method
-        texturedFace.updateButtonType("tutorial")
+        // Call the changeTexture method
+        texturedFace.updateButtonType(MakeupData.MakeupFilters.bridalMakeup[0])
         resetTracking()
     }
     
@@ -97,15 +111,34 @@ filterImages:[String] = ["white","white","white","white","white","white","white"
             }
         }
     }
-    
-    @IBAction func goBack(_ sender: Any) {
-        
-        performSegue(withIdentifier: "MenuScene", sender: nil)
-    }
+   
     
    
-
+    @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func backButton(_ sender: Any) {
+        print(isCollectionViewVisible)
+        if(!isCollectionViewVisible){
+            isCollectionViewVisible=true
+            collectionView.reloadData()
+            texturedFace.updateButtonType(MakeupData.MakeupFilters.bridalMakeup[0])
+            resetTracking()
+        }
+        else{
+            
+            // Instantiate the view controller with the specified storyboard ID
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // Instantiate the tab bar controller with the specified storyboard ID
+            if let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBar") as? UITabBarController {
+                // Optionally perform any setup or data passing here
+                tabBarController.modalPresentationStyle = .fullScreen
+                // Present the instantiated tab bar controller
+                present(tabBarController, animated: true, completion: nil )
+                
+            }
+        }
+    }
     
     
     
@@ -117,11 +150,12 @@ filterImages:[String] = ["white","white","white","white","white","white","white"
         
         sceneView.delegate = self
         sceneView.session.delegate = self
-        sceneView.automaticallyUpdatesLighting = true
+       
         
         // Set the initial face content.
         
         selectedVirtualContent = VirtualContentType.texture
+        
         
     }
 
@@ -165,6 +199,7 @@ filterImages:[String] = ["white","white","white","white","white","white","white"
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
         
         faceAnchorsAndContentControllers.removeAll()
+       
        
     }
     

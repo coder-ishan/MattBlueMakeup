@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		11EC6AE12134CD18003C1B28 /* VideoTexturedFace.shader in Resources */ = {isa = PBXBuildFile; fileRef = 11EC6AE02134CD18003C1B28 /* VideoTexturedFace.shader */; };
 		11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EE23D1213479CF00C0DEAD /* Utilities.swift */; };
+		2E0DE1952B385A53006CAB2A /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DE1942B385A53006CAB2A /* GlobalData.swift */; };
 		2E4203C12B2F0AB30027C36D /* FilterViewARCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4203C02B2F0AB30027C36D /* FilterViewARCollectionViewCell.swift */; };
+		2EF3E1242B35E27000D43A4D /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3E1232B35E27000D43A4D /* DemoViewController.swift */; };
 		2EF9E3612B31C78100F3FC51 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9E3602B31C78100F3FC51 /* MenuViewController.swift */; };
 		2EF9E3632B31CA4500F3FC51 /* OccasionTypeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF9E3622B31CA4500F3FC51 /* OccasionTypeCellCollectionViewCell.swift */; };
 		3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3929C48B1E89EC2C00E00B60 /* AppDelegate.swift */; };
@@ -27,7 +29,9 @@
 		11EC6AE02134CD18003C1B28 /* VideoTexturedFace.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = VideoTexturedFace.shader; sourceTree = "<group>"; };
 		11EE23D1213479CF00C0DEAD /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		11F053B72130CCD2005FCAF2 /* ARFaceGeometry.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ARFaceGeometry.obj; sourceTree = "<group>"; };
+		2E0DE1942B385A53006CAB2A /* GlobalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		2E4203C02B2F0AB30027C36D /* FilterViewARCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewARCollectionViewCell.swift; sourceTree = "<group>"; };
+		2EF3E1232B35E27000D43A4D /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		2EF9E3602B31C78100F3FC51 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		2EF9E3622B31CA4500F3FC51 /* OccasionTypeCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccasionTypeCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		3929C4881E89EC2C00E00B60 /* ARKitFaceExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitFaceExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,9 +100,11 @@
 				2EF9E3602B31C78100F3FC51 /* MenuViewController.swift */,
 				2E4203C02B2F0AB30027C36D /* FilterViewARCollectionViewCell.swift */,
 				2EF9E3622B31CA4500F3FC51 /* OccasionTypeCellCollectionViewCell.swift */,
+				2EF3E1232B35E27000D43A4D /* DemoViewController.swift */,
 				C8904E581F4CFE380089E530 /* Face Overlay Content */,
 				11EE23D1213479CF00C0DEAD /* Utilities.swift */,
 				1488324C1EFC3ED00043E0AB /* Resources */,
+				2E0DE1942B385A53006CAB2A /* GlobalData.swift */,
 			);
 			path = ARKitFaceExample;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 				2E4203C12B2F0AB30027C36D /* FilterViewARCollectionViewCell.swift in Sources */,
 				3929C48E1E89EC2C00E00B60 /* ViewController.swift in Sources */,
 				3929C48C1E89EC2C00E00B60 /* AppDelegate.swift in Sources */,
+				2EF3E1242B35E27000D43A4D /* DemoViewController.swift in Sources */,
 				2EF9E3632B31CA4500F3FC51 /* OccasionTypeCellCollectionViewCell.swift in Sources */,
 				2EF9E3612B31C78100F3FC51 /* MenuViewController.swift in Sources */,
+				2E0DE1952B385A53006CAB2A /* GlobalData.swift in Sources */,
 				C8904E551F4CFD000089E530 /* VirtualContent.swift in Sources */,
 				11EE23D2213479CF00C0DEAD /* Utilities.swift in Sources */,
 				C8904E571F4CFD730089E530 /* TexturedFace.swift in Sources */,

@@ -12,6 +12,8 @@ class OccasionTypeCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var TypeImage: UIImageView!
     
+    
     @IBOutlet weak var TypeLabel: UILabel!
+   
     
 }
