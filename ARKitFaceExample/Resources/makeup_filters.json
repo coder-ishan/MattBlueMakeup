@@ -1,0 +1,36 @@
+[
+  {
+    "filterName": "Bridal",
+    "filterId": 1,
+    "filterUIimage": "white",
+    "filterTutorialImage": "tutorial",
+    "filterMakeupImage": "makeup",
+    "filterCategories": ["Bridal", "Nude"]
+  },
+  {
+    "filterName": "Bridal",
+    "filterId": 1,
+    "filterUIimage": "white",
+    "filterTutorialImage": "tutorial",
+    "filterMakeupImage": "makeup",
+    "filterCategories": ["Bridal", "Men"]
+  },
+  {
+    "filterName": "Bridal",
+    "filterId": 1,
+    "filterUIimage": "white",
+    "filterTutorialImage": "tutorial",
+    "filterMakeupImage": "makeup",
+    "filterCategories": ["Bridal", "Nude"]
+  },
+  {
+    "filterName": "Bridal",
+    "filterId": 1,
+    "filterUIimage": "white",
+    "filterTutorialImage": "tutorial",
+    "filterMakeupImage": "makeup",
+    "filterCategories": ["Bridal", "Nude"]
+  },
+  
+]
+

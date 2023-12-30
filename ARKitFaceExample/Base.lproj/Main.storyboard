@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13500" y="221.67487684729065"/>
+            <point key="canvasLocation" x="13307" y="626"/>
         </scene>
         <!--Unsupported View Controller-->
         <scene sceneID="QPm-sc-AhW">
@@ -160,7 +160,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JRh-rY-bA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8644" y="-219"/>
+            <point key="canvasLocation" x="8880" y="-206"/>
         </scene>
         <!--Trending-->
         <scene sceneID="VHD-hN-pnA">
@@ -176,17 +176,33 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yvv-0x-I3u">
+                                <rect key="frame" x="364" y="32.333333333333329" width="50" height="48.666666666666671"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2sK-Bn-tFL" appends="YES" id="Jsv-qs-QRg"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ID4-8j-eJT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pBS-rv-9I0" firstAttribute="centerY" secondItem="rHk-7z-ejc" secondAttribute="centerY" id="ASx-75-GVz"/>
+                            <constraint firstItem="ID4-8j-eJT" firstAttribute="bottom" secondItem="Yvv-0x-I3u" secondAttribute="bottom" constant="767.66666666666663" id="DxK-Ji-YJ5"/>
+                            <constraint firstItem="Yvv-0x-I3u" firstAttribute="leading" secondItem="ID4-8j-eJT" secondAttribute="leading" constant="364" id="OjQ-nj-Xkk"/>
+                            <constraint firstItem="Yvv-0x-I3u" firstAttribute="top" secondItem="rHk-7z-ejc" secondAttribute="topMargin" constant="-27.666666666666671" id="TWc-CJ-Hux"/>
                             <constraint firstItem="pBS-rv-9I0" firstAttribute="centerX" secondItem="rHk-7z-ejc" secondAttribute="centerX" id="mVJ-yK-3t5"/>
+                            <constraint firstItem="ID4-8j-eJT" firstAttribute="trailing" secondItem="Yvv-0x-I3u" secondAttribute="trailing" constant="16" id="ucg-rs-3x5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Trending" image="flame" catalog="system" selectedImage="flame.fill" id="ZTu-kL-EcW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70C-sW-wZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2sK-Bn-tFL">
+                    <connections>
+                        <segue destination="snq-cH-DoX" kind="show" id="U71-xD-BoF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="10570" y="627"/>
         </scene>
@@ -204,11 +220,22 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UqF-Af-lMb">
+                                <rect key="frame" x="364" y="31" width="50" height="49.999999999999986"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AwU-cd-JQg" appends="YES" id="faX-wg-GdH"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kW5-ry-Sq3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UqF-Af-lMb" firstAttribute="leading" secondItem="kW5-ry-Sq3" secondAttribute="leading" constant="364" id="28x-I8-GOA"/>
+                            <constraint firstItem="kW5-ry-Sq3" firstAttribute="bottom" secondItem="UqF-Af-lMb" secondAttribute="bottom" constant="767.66666666666674" id="2au-ft-bAc"/>
+                            <constraint firstItem="kW5-ry-Sq3" firstAttribute="trailing" secondItem="UqF-Af-lMb" secondAttribute="trailing" constant="16" id="GA9-0c-lNf"/>
                             <constraint firstItem="4BE-W7-gKy" firstAttribute="centerY" secondItem="HTS-7R-Ul6" secondAttribute="centerY" id="VNQ-ey-07W"/>
+                            <constraint firstItem="UqF-Af-lMb" firstAttribute="top" secondItem="HTS-7R-Ul6" secondAttribute="topMargin" constant="-29" id="eAp-nD-Wc1"/>
                             <constraint firstItem="4BE-W7-gKy" firstAttribute="centerX" secondItem="HTS-7R-Ul6" secondAttribute="centerX" id="lgf-rQ-VG1"/>
                         </constraints>
                     </view>
@@ -217,8 +244,78 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaS-er-CZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AwU-cd-JQg">
+                    <connections>
+                        <segue destination="snq-cH-DoX" kind="show" id="pLK-pL-ggJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="11448.799999999999" y="626.60098522167493"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="KMb-vQ-gsA">
+            <objects>
+                <viewController title="Profile View Controller" modalPresentationStyle="pageSheet" id="3rh-WD-ibk" customClass="ProfileViewController" customModule="ARKitFaceExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wdr-23-nAu">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ishan Singh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el3-61-SdV">
+                                <rect key="frame" x="143" y="123" width="234" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GD8-gw-dCO">
+                                <rect key="frame" x="0.0" y="206" width="430" height="696"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3rh-WD-ibk" id="sqU-vF-ncJ"/>
+                                    <outlet property="delegate" destination="3rh-WD-ibk" id="lE3-Sy-GVP"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Party" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-sX-gcr">
+                                <rect key="frame" x="40" y="115" width="78" height="83"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="3eX-kV-ZBy"/>
+                                    <constraint firstAttribute="height" constant="83" id="o49-Sk-hux"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="JBR-rQ-Pnu" appends="YES" id="C7L-gB-q7t"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sp1-01-RLN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="leading" secondItem="r2C-sX-gcr" secondAttribute="trailing" constant="25" id="2fQ-xe-vau"/>
+                            <constraint firstItem="sp1-01-RLN" firstAttribute="trailing" secondItem="el3-61-SdV" secondAttribute="trailing" constant="53" id="3WZ-6O-Wi6"/>
+                            <constraint firstItem="GD8-gw-dCO" firstAttribute="top" secondItem="el3-61-SdV" secondAttribute="bottom" constant="16" id="BaT-Ti-wqD"/>
+                            <constraint firstItem="sp1-01-RLN" firstAttribute="bottom" secondItem="GD8-gw-dCO" secondAttribute="bottom" constant="20" id="BkD-4c-Z99"/>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="67" id="WQb-9Q-KQ0"/>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="centerY" secondItem="r2C-sX-gcr" secondAttribute="centerY" id="jNR-Ka-Jhj"/>
+                            <constraint firstItem="GD8-gw-dCO" firstAttribute="trailing" secondItem="sp1-01-RLN" secondAttribute="trailing" id="mDU-kE-9LU"/>
+                            <constraint firstItem="GD8-gw-dCO" firstAttribute="leading" secondItem="sp1-01-RLN" secondAttribute="leading" id="y4D-6X-wtc"/>
+                            <constraint firstItem="r2C-sX-gcr" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="59" id="yap-4c-S0f"/>
+                            <constraint firstItem="r2C-sX-gcr" firstAttribute="leading" secondItem="sp1-01-RLN" secondAttribute="leading" constant="40" id="z4u-Ub-LO4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="KIU-JE-FpN"/>
+                    <connections>
+                        <outlet property="NameLabel" destination="el3-61-SdV" id="xoB-fT-4Mg"/>
+                        <outlet property="TableView" destination="GD8-gw-dCO" id="xe3-9l-7Tx"/>
+                        <outlet property="profileImage" destination="r2C-sX-gcr" id="KZL-Jd-enW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQh-8a-uax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JBR-rQ-Pnu">
+                    <connections>
+                        <action selector="changeProfilePic:" destination="3rh-WD-ibk" id="ccF-OP-vHG"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="12344.651162790698" y="1464.5922746781116"/>
         </scene>
         <!--MenuViewController-->
         <scene sceneID="VXM-5y-cMs">
@@ -228,15 +325,18 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RHN-er-yUj">
-                                <rect key="frame" x="364" y="31" width="50" height="48.666666666666671"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RHN-er-yUj">
+                                <rect key="frame" x="364" y="31" width="50" height="49.999999999999986"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="YZg-4l-dMN"/>
-                                    <constraint firstAttribute="height" constant="50" id="bZR-Z0-6i2"/>
+                                    <constraint firstAttribute="height" constant="51.333333333333314" id="Q2Y-1i-Vq5"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PIJ-f0-lHp" appends="YES" id="b7K-Ww-yk2"/>
+                                </connections>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6rX-Ft-bsR">
-                                <rect key="frame" x="56" y="87.666666666666671" width="318" height="32"/>
+                                <rect key="frame" x="56" y="88.333333333333329" width="318" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="g35-xt-G5K"/>
@@ -250,7 +350,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 </connections>
                             </segmentedControl>
                             <searchBar contentMode="scaleToFill" barStyle="black" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-JW-YhB">
-                                <rect key="frame" x="16" y="142.66666666666666" width="281" height="56"/>
+                                <rect key="frame" x="16" y="143.33333333333334" width="281" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -259,7 +359,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-qe-5Kw">
-                                <rect key="frame" x="0.0" y="222.66666666666669" width="430" height="709.33333333333326"/>
+                                <rect key="frame" x="0.0" y="223.33333333333331" width="430" height="708.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BoM-26-YYc">
                                     <size key="itemSize" width="180" height="288"/>
@@ -318,19 +418,18 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                         <viewLayoutGuide key="safeArea" id="6gT-NT-11B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RHN-er-yUj" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="364" id="0wy-Jc-jfr"/>
                             <constraint firstAttribute="trailing" secondItem="viQ-qe-5Kw" secondAttribute="trailing" id="2SM-IV-twQ"/>
                             <constraint firstItem="6rX-Ft-bsR" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="56" id="3OH-a4-Mf0"/>
                             <constraint firstAttribute="bottomMargin" secondItem="viQ-qe-5Kw" secondAttribute="bottom" constant="-83" id="3r4-12-x1S"/>
                             <constraint firstItem="viQ-qe-5Kw" firstAttribute="top" secondItem="0bf-JW-YhB" secondAttribute="bottom" constant="24" id="5eu-pD-rEU"/>
-                            <constraint firstItem="6rX-Ft-bsR" firstAttribute="centerY" secondItem="RHN-er-yUj" secondAttribute="centerY" constant="48" id="78Y-uA-uxn"/>
-                            <constraint firstItem="RHN-er-yUj" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="top" constant="30" id="81j-6u-pnw"/>
+                            <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="RHN-er-yUj" secondAttribute="trailing" constant="16" id="6uJ-4F-65e"/>
                             <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="0bf-JW-YhB" secondAttribute="trailing" constant="133" id="COg-SF-Wan"/>
-                            <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="RHN-er-yUj" secondAttribute="trailing" constant="16" id="E88-XH-hTs"/>
                             <constraint firstItem="0bf-JW-YhB" firstAttribute="top" secondItem="6rX-Ft-bsR" secondAttribute="bottom" constant="24" id="F2D-yu-vlb"/>
-                            <constraint firstItem="RHN-er-yUj" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="top" constant="30" id="Flb-Gs-AcP"/>
+                            <constraint firstItem="RHN-er-yUj" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="topMargin" constant="-29" id="MHA-ho-EwK"/>
                             <constraint firstItem="viQ-qe-5Kw" firstAttribute="leading" secondItem="aU1-td-Wk5" secondAttribute="leading" id="OvH-k8-vGl"/>
                             <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="6rX-Ft-bsR" secondAttribute="trailing" constant="56" id="UWW-2Y-WhH"/>
-                            <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="RHN-er-yUj" secondAttribute="trailing" constant="16" id="d6V-rk-KVG"/>
+                            <constraint firstItem="6rX-Ft-bsR" firstAttribute="top" secondItem="RHN-er-yUj" secondAttribute="bottom" constant="7.0000000000000142" id="oma-It-QeD"/>
                             <constraint firstItem="0bf-JW-YhB" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="16" id="xji-FA-7Jt"/>
                         </constraints>
                     </view>
@@ -344,6 +443,11 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkW-6r-Gyv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PIJ-f0-lHp">
+                    <connections>
+                        <segue destination="snq-cH-DoX" kind="show" id="VXo-bu-qa3"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="12348" y="627"/>
         </scene>
@@ -367,9 +471,32 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
             </objects>
             <point key="canvasLocation" x="11448.799999999999" y="-154.43349753694582"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kaL-7h-fls">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="snq-cH-DoX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="A03-hk-jeP"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vvc-MK-4pt">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3rh-WD-ibk" kind="relationship" relationship="rootViewController" id="9yB-vw-eST"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiE-KH-ySU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11446.046511627907" y="1464.5922746781116"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pLK-pL-ggJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Bridal" width="453" height="640"/>
+        <image name="Party" width="184" height="274"/>
         <image name="flame" catalog="system" width="106" height="128"/>
         <image name="flame.fill" catalog="system" width="106" height="128"/>
         <image name="house" catalog="system" width="128" height="104"/>
@@ -382,13 +509,13 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
-            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
