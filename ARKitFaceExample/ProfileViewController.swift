@@ -9,10 +9,10 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var headers = ["Account", "More", "Support" ]
-    var accounts = ["My Account","Payment History"]
-    var morefeatures = ["Be A Content Creator"]
-    var support = ["Privacy Policy", "Terms And Condition", "LogOut" ]
+    var headers = ["  Account", "  More", "  Support" ]
+    var accounts = ["  My Account","  Payment History"]
+    var morefeatures = ["  Be A Content Creator"]
+    var support = ["  Privacy Policy", "  Terms And Condition", "  LogOut" ]
     
     @IBOutlet weak var profileImage: UIImageView!
     
@@ -20,12 +20,19 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
+    func setModes(){
+        view.backgroundColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        TableView.backgroundColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         registerTableCells()
         setImage()
+        setModes()
         NameLabel.text = User.shared.name
         profileImage.image = User.shared.profilePicture
     }
@@ -42,7 +49,7 @@ class ProfileViewController: UIViewController {
                 profileImage.clipsToBounds = true
             } else {
                 // Default image or placeholder if the image is not found
-                profileImage.image = UIImage(named: "default_profile_image")
+                profileImage.image = UIImage(named: "Bridal")
             }
         
     }
@@ -287,6 +294,9 @@ extension ProfileViewController: UITableViewDelegate,UITableViewDataSource,UIIma
         cell.titles.font = UIFont.systemFont(ofSize: 15)
         cell.backgroundColor = UIColor.clear
         cell.contentView.backgroundColor = UIColor.clear
+        if(colorMode == .dark){ cell.titles.textColor = UIColor.white}
+        else {cell.titles.textColor = UIColor.black}
+        
         switch indexPath.section {
         case
             0:

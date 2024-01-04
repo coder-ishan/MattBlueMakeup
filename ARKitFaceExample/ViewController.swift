@@ -10,12 +10,16 @@ import SceneKit
 import UIKit
 
 class ViewController: UIViewController, ARSessionDelegate,UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    
+
+    
+    
     var selectedOccasionType: String?
     var selectedCell: FilterViewARCollectionViewCell?
     
     
-    var
-filterImages:[String] = GlobalData.FilterImages.bridal
+    var filterImages:[String] = GlobalData.FilterImages.bridal
     var isCollectionViewVisible = true
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

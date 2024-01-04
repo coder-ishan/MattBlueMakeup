@@ -260,14 +260,8 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ishan Singh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el3-61-SdV">
-                                <rect key="frame" x="143" y="123" width="234" height="67"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GD8-gw-dCO">
-                                <rect key="frame" x="0.0" y="206" width="430" height="696"/>
+                                <rect key="frame" x="0.0" y="204" width="430" height="698"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="3rh-WD-ibk" id="sqU-vF-ncJ"/>
@@ -275,30 +269,35 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Party" translatesAutoresizingMaskIntoConstraints="NO" id="r2C-sX-gcr">
-                                <rect key="frame" x="40" y="115" width="78" height="83"/>
+                                <rect key="frame" x="55" y="95" width="80" height="80"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="3eX-kV-ZBy"/>
-                                    <constraint firstAttribute="height" constant="83" id="o49-Sk-hux"/>
+                                    <constraint firstAttribute="width" constant="80" id="3eX-kV-ZBy"/>
+                                    <constraint firstAttribute="height" constant="80" id="o49-Sk-hux"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="JBR-rQ-Pnu" appends="YES" id="C7L-gB-q7t"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ishan Singh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el3-61-SdV">
+                                <rect key="frame" x="201" y="102" width="141" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sp1-01-RLN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="el3-61-SdV" firstAttribute="leading" secondItem="r2C-sX-gcr" secondAttribute="trailing" constant="25" id="2fQ-xe-vau"/>
-                            <constraint firstItem="sp1-01-RLN" firstAttribute="trailing" secondItem="el3-61-SdV" secondAttribute="trailing" constant="53" id="3WZ-6O-Wi6"/>
-                            <constraint firstItem="GD8-gw-dCO" firstAttribute="top" secondItem="el3-61-SdV" secondAttribute="bottom" constant="16" id="BaT-Ti-wqD"/>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="leading" secondItem="r2C-sX-gcr" secondAttribute="trailing" constant="66" id="2fQ-xe-vau"/>
+                            <constraint firstItem="sp1-01-RLN" firstAttribute="trailing" secondItem="el3-61-SdV" secondAttribute="trailing" constant="88" id="3WZ-6O-Wi6"/>
+                            <constraint firstItem="GD8-gw-dCO" firstAttribute="top" secondItem="el3-61-SdV" secondAttribute="bottom" constant="35" id="BaT-Ti-wqD"/>
                             <constraint firstItem="sp1-01-RLN" firstAttribute="bottom" secondItem="GD8-gw-dCO" secondAttribute="bottom" constant="20" id="BkD-4c-Z99"/>
-                            <constraint firstItem="el3-61-SdV" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="67" id="WQb-9Q-KQ0"/>
-                            <constraint firstItem="el3-61-SdV" firstAttribute="centerY" secondItem="r2C-sX-gcr" secondAttribute="centerY" id="jNR-Ka-Jhj"/>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="46" id="WQb-9Q-KQ0"/>
+                            <constraint firstItem="el3-61-SdV" firstAttribute="centerY" secondItem="r2C-sX-gcr" secondAttribute="centerY" constant="0.5" id="jNR-Ka-Jhj"/>
                             <constraint firstItem="GD8-gw-dCO" firstAttribute="trailing" secondItem="sp1-01-RLN" secondAttribute="trailing" id="mDU-kE-9LU"/>
                             <constraint firstItem="GD8-gw-dCO" firstAttribute="leading" secondItem="sp1-01-RLN" secondAttribute="leading" id="y4D-6X-wtc"/>
-                            <constraint firstItem="r2C-sX-gcr" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="59" id="yap-4c-S0f"/>
-                            <constraint firstItem="r2C-sX-gcr" firstAttribute="leading" secondItem="sp1-01-RLN" secondAttribute="leading" constant="40" id="z4u-Ub-LO4"/>
+                            <constraint firstItem="r2C-sX-gcr" firstAttribute="top" secondItem="sp1-01-RLN" secondAttribute="top" constant="39" id="yap-4c-S0f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KIU-JE-FpN"/>
@@ -325,18 +324,19 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RHN-er-yUj">
-                                <rect key="frame" x="364" y="31" width="50" height="49.999999999999986"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" misplaced="YES" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RHN-er-yUj">
+                                <rect key="frame" x="364" y="31" width="50" height="50"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51.333333333333314" id="Q2Y-1i-Vq5"/>
+                                    <constraint firstAttribute="width" constant="50" id="Asf-KV-efY"/>
+                                    <constraint firstAttribute="height" constant="50" id="yOq-eQ-8wV"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="PIJ-f0-lHp" appends="YES" id="b7K-Ww-yk2"/>
                                 </connections>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6rX-Ft-bsR">
-                                <rect key="frame" x="56" y="88.333333333333329" width="318" height="32"/>
+                                <rect key="frame" x="56" y="89.333333333333329" width="318" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="g35-xt-G5K"/>
@@ -349,8 +349,8 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                     <action selector="TopNavBar:" destination="lE0-Db-zMg" eventType="valueChanged" id="wr5-Sb-WOB"/>
                                 </connections>
                             </segmentedControl>
-                            <searchBar contentMode="scaleToFill" barStyle="black" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-JW-YhB">
-                                <rect key="frame" x="16" y="143.33333333333334" width="281" height="56"/>
+                            <searchBar contentMode="scaleToFill" barStyle="black" searchBarStyle="prominent" text="" translatesAutoresizingMaskIntoConstraints="NO" id="0bf-JW-YhB">
+                                <rect key="frame" x="16" y="144.33333333333334" width="281" height="56"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -359,7 +359,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-qe-5Kw">
-                                <rect key="frame" x="0.0" y="223.33333333333331" width="430" height="708.66666666666674"/>
+                                <rect key="frame" x="0.0" y="224.33333333333331" width="430" height="707.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BoM-26-YYc">
                                     <size key="itemSize" width="180" height="288"/>
@@ -414,22 +414,36 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                                     <outlet property="delegate" destination="lE0-Db-zMg" id="JQF-IZ-Xq9"/>
                                 </connections>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TRT-2k-ncF">
+                                <rect key="frame" x="150" y="50" width="131" height="32"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="light"/>
+                                    <segment title="dark"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="LightDarkToggle:" destination="lE0-Db-zMg" eventType="valueChanged" id="IaP-84-zx8"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6gT-NT-11B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RHN-er-yUj" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="364" id="0wy-Jc-jfr"/>
                             <constraint firstAttribute="trailing" secondItem="viQ-qe-5Kw" secondAttribute="trailing" id="2SM-IV-twQ"/>
                             <constraint firstItem="6rX-Ft-bsR" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="56" id="3OH-a4-Mf0"/>
+                            <constraint firstItem="RHN-er-yUj" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="top" constant="30" id="3bO-RD-EDb"/>
                             <constraint firstAttribute="bottomMargin" secondItem="viQ-qe-5Kw" secondAttribute="bottom" constant="-83" id="3r4-12-x1S"/>
                             <constraint firstItem="viQ-qe-5Kw" firstAttribute="top" secondItem="0bf-JW-YhB" secondAttribute="bottom" constant="24" id="5eu-pD-rEU"/>
-                            <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="RHN-er-yUj" secondAttribute="trailing" constant="16" id="6uJ-4F-65e"/>
                             <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="0bf-JW-YhB" secondAttribute="trailing" constant="133" id="COg-SF-Wan"/>
                             <constraint firstItem="0bf-JW-YhB" firstAttribute="top" secondItem="6rX-Ft-bsR" secondAttribute="bottom" constant="24" id="F2D-yu-vlb"/>
-                            <constraint firstItem="RHN-er-yUj" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="topMargin" constant="-29" id="MHA-ho-EwK"/>
                             <constraint firstItem="viQ-qe-5Kw" firstAttribute="leading" secondItem="aU1-td-Wk5" secondAttribute="leading" id="OvH-k8-vGl"/>
+                            <constraint firstItem="TRT-2k-ncF" firstAttribute="centerX" secondItem="6rX-Ft-bsR" secondAttribute="centerX" id="Qir-Ni-xtK"/>
+                            <constraint firstItem="TRT-2k-ncF" firstAttribute="top" secondItem="aU1-td-Wk5" secondAttribute="topMargin" constant="-9" id="TDe-d6-vis"/>
                             <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="6rX-Ft-bsR" secondAttribute="trailing" constant="56" id="UWW-2Y-WhH"/>
-                            <constraint firstItem="6rX-Ft-bsR" firstAttribute="top" secondItem="RHN-er-yUj" secondAttribute="bottom" constant="7.0000000000000142" id="oma-It-QeD"/>
+                            <constraint firstItem="6rX-Ft-bsR" firstAttribute="top" secondItem="TRT-2k-ncF" secondAttribute="bottom" constant="8.3333333333333286" id="WK4-qQ-xr0"/>
+                            <constraint firstItem="6gT-NT-11B" firstAttribute="trailing" secondItem="RHN-er-yUj" secondAttribute="trailing" constant="16" id="dRm-JD-eeY"/>
+                            <constraint firstItem="TRT-2k-ncF" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="150" id="xfQ-xH-G72"/>
                             <constraint firstItem="0bf-JW-YhB" firstAttribute="leading" secondItem="6gT-NT-11B" secondAttribute="leading" constant="16" id="xji-FA-7Jt"/>
                         </constraints>
                     </view>
@@ -439,6 +453,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
                     <connections>
                         <outlet property="FilterMenuCollectionView" destination="viQ-qe-5Kw" id="xbg-pt-3Oq"/>
                         <outlet property="SearchBar" destination="0bf-JW-YhB" id="yIj-Ll-LOS"/>
+                        <outlet property="collectionview" destination="viQ-qe-5Kw" id="BsW-LH-ZBt"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="ARScene" id="VeT-c7-NwA"/>
                     </connections>
                 </viewController>
@@ -492,7 +507,7 @@ Shipping apps must support devices without face tracking. In your app, offer UI 
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="pLK-pL-ggJ"/>
+        <segue reference="VXo-bu-qa3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Bridal" width="453" height="640"/>

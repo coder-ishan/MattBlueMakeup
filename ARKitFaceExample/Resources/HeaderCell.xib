@@ -18,16 +18,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyH-hU-qqw">
-                        <rect key="frame" x="20" y="2" width="459" height="131"/>
+                        <rect key="frame" x="0.0" y="0.0" width="479" height="131"/>
                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="QyH-hU-qqw" secondAttribute="bottom" constant="2" id="Sdo-MM-SQf"/>
-                    <constraint firstItem="QyH-hU-qqw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="VMG-Uq-6AS"/>
-                    <constraint firstItem="QyH-hU-qqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="dMH-vI-yIR"/>
+                    <constraint firstAttribute="bottom" secondItem="QyH-hU-qqw" secondAttribute="bottom" constant="4" id="Sdo-MM-SQf"/>
+                    <constraint firstItem="QyH-hU-qqw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VMG-Uq-6AS"/>
+                    <constraint firstItem="QyH-hU-qqw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dMH-vI-yIR"/>
                     <constraint firstAttribute="trailing" secondItem="QyH-hU-qqw" secondAttribute="trailing" id="jj3-qy-X04"/>
                 </constraints>
             </tableViewCellContentView>

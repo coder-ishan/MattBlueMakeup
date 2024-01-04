@@ -9,7 +9,40 @@
 import UIKit
 
 class MenuViewController: UIViewController, UISearchBarDelegate {
-
+        
+    @IBOutlet weak var collectionview: UICollectionView!
+    
+    
+    
+    @IBAction func LightDarkToggle(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            colorMode = .light
+        case 1:
+            
+            colorMode = .dark
+        default:
+            
+            colorMode = .light
+        }
+        setModes()
+        
+    }
+    
+    func setModes(){
+        customizeSearchBar()
+        searchBar.barTintColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        
+        view.backgroundColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        
+        
+        collectionview.backgroundColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        FilterMenuCollectionView.reloadData()
+        FilterMenuCollectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
+        
+       
+    }
+   
     
     
    
@@ -19,16 +52,17 @@ class MenuViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         searchBar.delegate = self
-
-                // Customize the search bar appearance
-                customizeSearchBar()
+            setModes()
         // Do any additional setup after loading the view.
         
     }
     func customizeSearchBar() {
-            // Access the search bar's background view
+           
+            
             if let searchField = searchBar.value(forKey: "searchField") as? UITextField {
                 // Set the corner radius
+                searchField.backgroundColor = (colorMode == .light) ? .lightmodeGrayColor : .darkmodeGrayColor
+                searchField.textColor = (colorMode == .light) ? .lightModeTextColor : .darkModeTextColor
                 searchField.layer.cornerRadius = 15 // Adjust the value as needed
                 searchField.clipsToBounds = true
             }
@@ -45,7 +79,6 @@ class MenuViewController: UIViewController, UISearchBarDelegate {
     @IBAction func TopNavBar(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            
             OccasionTypeName = GlobalData.UIImages.occasionImages
         case 1:
             
@@ -57,6 +90,7 @@ class MenuViewController: UIViewController, UISearchBarDelegate {
         FilterMenuCollectionView.reloadData()
         FilterMenuCollectionView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
     }
+    
     
     
     @IBOutlet weak var FilterMenuCollectionView: UICollectionView!
@@ -86,7 +120,8 @@ extension MenuViewController : UICollectionViewDelegate,UICollectionViewDataSour
         cell.TypeLabel.text = OccasionTypeName[indexPath.row]
         cell.layer.cornerRadius = 10
         cell.TypeImage.layer.cornerRadius = 30
-        
+        cell.backgroundColor = (colorMode == .light) ? .lightModeBackgroundColor : .darkModeBackgroundColor
+        cell.TypeLabel.textColor = (colorMode == .light) ? .lightModeTextColor : .darkModeTextColor
         
         return cell
     }

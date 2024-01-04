@@ -9,6 +9,21 @@
 import Foundation
 import UIKit
 
+enum ColorMode {
+    case light
+    case dark
+}
+extension UIColor {
+    static let lightModeBackgroundColor = UIColor.white
+    static let darkModeBackgroundColor = UIColor.black
+    static let lightModeTextColor = UIColor.black
+    static let darkModeTextColor = UIColor.white
+    static let darkmodeGrayColor = UIColor.gray
+    static let lightmodeGrayColor = UIColor.lightGray
+    
+    // Add more color constants as needed
+}
+var colorMode: ColorMode = .light// Default color mode is light
 struct MakeupData{
     struct MakeupFilters {
         static var bridalMakeup: [String] = ["makeup", "makeup", "makeup"]
@@ -60,10 +75,10 @@ class User {
        // Load data from UserDefaults
        private func loadFromUserDefaults() {
            let userDefaults = UserDefaults.standard
-           name = userDefaults.string(forKey: "UserName") ?? ""
-           dateOfBirth = userDefaults.string(forKey: "UserDateOfBirth") ?? ""
-           email = userDefaults.string(forKey: "UserEmail") ?? ""
-           phoneNumber = userDefaults.string(forKey: "UserContact") ?? ""
+           name = userDefaults.string(forKey: "UserName") ?? name
+           dateOfBirth = userDefaults.string(forKey: "UserDateOfBirth") ?? dateOfBirth
+           email = userDefaults.string(forKey: "UserEmail") ?? email
+           phoneNumber = userDefaults.string(forKey: "UserContact") ?? phoneNumber
            // Load profile picture data from UserDefaults and convert it back to UIImage
                    if let profilePictureData = userDefaults.data(forKey: "UserProfilePicture") {
                        profilePicture = UIImage(data: profilePictureData)
